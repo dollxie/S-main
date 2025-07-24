@@ -119,7 +119,7 @@ We welcome contributions to SceneSolver! To get started:
    ```bash
    git push origin feature/YourFeatureName
    ```
-5. Open a Pull Request on the main repository
+5. Open a **Pull Request** on the main repository
    - Clearly describe your changes
    - Reference any related issues
 
