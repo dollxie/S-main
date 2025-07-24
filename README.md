@@ -102,7 +102,7 @@ git push origin main
 | `FLASK_APP`      | Entry point for Flask backend (e.g. `app.py`) |
 
 
-## Contributing
+## Contribution
 
 We welcome contributions to SceneSolver! To get started:
 
