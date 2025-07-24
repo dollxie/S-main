@@ -1,37 +1,50 @@
 # SceneSolver - Crime Detection System
 
-A real-time crime detection system that uses AI to analyze video footage and identify potential criminal activities.
+SceneSolver is a real-time AI-powered crime detection system that analyzes video footage to identify potential criminal activities using advanced computer vision models.
+
+---
 
 ## Features
 
-- Video upload and analysis
-- Real-time crime detection using Timesformer and CLIP models
-- Object detection for suspicious items
-- AI-powered video captioning
-- Evidence extraction and documentation
+- Video upload and analysis interface  
+- Real-time crime classification using TimeSformer and CLIP  
+- Suspicious object detection via YOLOv8  
+- AI-powered video captioning for forensic insights  
+- Automatic evidence extraction and documentation  
+
+---
 
 ## Tech Stack
 
-- Backend: Python, Flask
-- Frontend: React, Material-UI
-- AI Models: Timesformer, CLIP, YOLOv8
-- Deployment: Vercel
+| Layer        | Tools & Frameworks             |
+|--------------|-------------------------------|
+| Frontend     | React.js, Material UI         |
+| Backend      | Python, Flask                 |
+| AI Models    | TimeSformer, CLIP, YOLOv8     |
+| Deployment   | Vercel |
+
+---
 
 ## Setup Instructions
 
 ### Local Development
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/scenesolver.git
-cd scenesolver
+1. Clone the repository
+ ```bash
+   git clone https://github.com/yourusername/scenesolver.git
+   cd scenesolver
 ```
 
 2. Set up the backend:
 ```bash
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+# On Windows:
+venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+
 pip install -r requirements.txt
+
 ```
 
 3. Set up the frontend:
@@ -40,17 +53,20 @@ cd frontend
 npm install
 ```
 
-4. Create a `.env` file in the root directory with your API keys:
+4. Add environment variables:
 ```
 GOOGLE_API_KEY=your_google_api_key
+FLASK_ENV=development
+FLASK_APP=app.py
 ```
 
-5. Start the development servers:
+5. Run the development servers:
+- Terminal 1 (Backend)
 ```bash
-# Terminal 1 (Backend)
 python app.py
-
-# Terminal 2 (Frontend)
+```
+- Terminal 2 (Frontend)
+```bash
 cd frontend
 npm start
 ```
@@ -64,7 +80,7 @@ git commit -m "Initial commit"
 git push origin main
 ```
 
-2. Connect your GitHub repository to Vercel:
+2. Connect to Vercel:
    - Go to [Vercel](https://vercel.com)
    - Import your repository
    - Configure the build settings:
@@ -74,22 +90,43 @@ git push origin main
    - Add environment variables in Vercel dashboard
 
 3. Deploy:
-   - Vercel will automatically deploy your application
-   - You can also trigger manual deployments from the Vercel dashboard
+   - Vercel will automatically deploy your app on push
+   - Manual deployments can also be triggered from the dashboard
 
 ## Environment Variables
 
-- `GOOGLE_API_KEY`: Your Google API key for Gemini model
-- `FLASK_ENV`: Set to 'production' for deployment
-- `FLASK_APP`: Set to 'app.py'
+| Variable         | Description                             |
+|------------------|-----------------------------------------|
+| `GOOGLE_API_KEY` | API key for Google Gemini model         |
+| `FLASK_ENV`      | Set to `production` or `development`    |
+| `FLASK_APP`      | Entry point for Flask backend (e.g. `app.py`) |
+
 
 ## Contributing
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+We welcome contributions to SceneSolver! To get started:
+
+1. **Fork** the repository  
+2. **Create a feature branch**
+   ```bash
+   git checkout -b feature/YourFeatureName
+   ```
+3. Make your changes and commit them with a clear message
+   ```bash
+   git commit -m "Add: Short description of your feature"
+   ```
+4. Push the branch to your fork
+   ```bash
+   git push origin feature/YourFeatureName
+   ```
+5. Open a Pull Request on the main repository
+   - Clearly describe your changes
+   - Reference any related issues
+
+> **Note:**  
+> This project is still in active development. Features, models, and APIs may change frequently.  
+> If you encounter any issues or have suggestions, feel free to open an issue or contribute directly.
+
 
 ## License
 
